@@ -13,7 +13,7 @@ const carSchema = new Schema(
     transmission: String,
     engine: String,
     horsePower: String,
-    Image: String
+    image: String
   },
   { timestamps: true }
 )
