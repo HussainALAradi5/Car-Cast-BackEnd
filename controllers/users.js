@@ -32,7 +32,7 @@ const update = async (req, res) => {
 
     const userName = updates.userName
     const email = updates.email
-
+    console.log(`userName:${userName}\nemail:${email}`)
     userName.trim()
     email.trim()
 

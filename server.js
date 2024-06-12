@@ -7,7 +7,13 @@ const carRouter = require('./routes/cars')
 const daySpellRouter = require('./routes/daySpells')
 const indexRouter = require('./routes/index')
 const userRouter = require('./routes/users')
-
+const User = require('./models/user')
+User.insertMany({
+  userName: 'Hussain',
+  email: 'hussainAradi.ha@gmail.com',
+  type: 'client',
+  isActive: true
+})
 const PORT = process.env.PORT || 3001
 
 const db = require('./db')
@@ -24,6 +30,7 @@ app.use(methodOverride('_method'))
 
 app.use('/', indexRouter)
 app.use('/cars', carRouter)
+app.use('/users', userRouter)
 app.listen(PORT, () => {
   console.log(`Running Express server on Port ${PORT}`)
 })
