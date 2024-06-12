@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const carCtrl = require('../controllers/cars')
+const carCtrl = require('../controllers/car')
 router.get('/', carCtrl.index)
 router.get('/new', carCtrl.new)
 router.post('/new', carCtrl.new)

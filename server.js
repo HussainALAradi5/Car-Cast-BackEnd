@@ -3,17 +3,17 @@ const logger = require('morgan')
 const cors = require('cors')
 const path = require('path')
 
-const carRouter = require('./routes/cars')
+const carRouter = require('./routes/car')
 const daySpellRouter = require('./routes/daySpells')
 const indexRouter = require('./routes/index')
-const userRouter = require('./routes/users')
+const userRouter = require('./routes/user')
 const User = require('./models/user')
-User.insertMany({
+/* User.insertMany({
   userName: 'Hussain',
   email: 'hussainAradi.ha@gmail.com',
   type: 'client',
   isActive: true
-})
+}) */
 const PORT = process.env.PORT || 3001
 
 const db = require('./db')
@@ -29,8 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
 
 app.use('/', indexRouter)
-app.use('/cars', carRouter)
-app.use('/users', userRouter)
+app.use('/car', carRouter)
+app.use('/user', userRouter)
 app.listen(PORT, () => {
   console.log(`Running Express server on Port ${PORT}`)
 })
