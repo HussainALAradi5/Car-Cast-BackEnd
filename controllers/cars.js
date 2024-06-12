@@ -38,7 +38,6 @@ const show = async (req, res) => {
 
   try {
     const car = await Car.findOne({ id: carId })
-
     if (!car) {
       return res.status(404).send('Car not found')
     }
