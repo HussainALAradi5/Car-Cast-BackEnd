@@ -1,0 +1,6 @@
+1)cars:https://freetestapi.com/api/v1/cars
+2)spells:https://hp-api.herokuapp.com/api/spells
+3)Google Maps:https://mapsplatform.google.com/pricing/
+4)weather:
+i)OpenWeatherMap: https://openweathermap.org/
+ii)WeatherAPI: https://www.weatherapi.com/
