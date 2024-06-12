@@ -6,7 +6,7 @@ const index = async (req, res) => {
   try {
     const response = await axios.get(url)
     const carsData = response.data
-
+    console.log('carDate=' + carsData)
     const cars = carsData.map((car) => ({
       id: car.id,
       make: car.make,

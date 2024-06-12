@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 //GET home page
 router.get('/', (req, res) => {
-  res.redirect('/cars')
+  res.redirect('/')
   res.send('connected!')
 })
 module.exports = router
