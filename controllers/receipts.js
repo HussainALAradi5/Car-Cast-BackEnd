@@ -28,6 +28,31 @@ const show= async (req, res) => {
 
   }
 
+  // const create = async (totalAmount, userId) => {
+  //   try {
+  //     console.log({ totalAmount, userId })
+  
+  //     // Create a new receipt
+  //     const newReceipt = new Reciept({
+  //       totalAmount: totalAmount,
+  //       userId: userId._id
+  //     })
+  //     await newReceipt.save()
+  //     const receiptId = newReceipt._id
+  
+  //     userId.receipts.push(newReceipt)
+  //     const updatedUser = await userId.save()
+  //     console.log({ updatedUser })
+  
+  //     return receiptId
+  //     // push the receipt to the user
+  //   } catch (err) {
+  //     console.error(err)
+  //   }
+  // }
+  
   module.exports = {
+    index,
     show,
+    create
   }
