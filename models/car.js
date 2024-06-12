@@ -1,15 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const reviewSchema = new Schema(
-  {
-    rid: Number,
-    uid: String,
-    review: String
-  },
-  { timestamps: true }
-)
-
 const carSchema = new Schema(
   {
     id: Number,
@@ -23,7 +14,8 @@ const carSchema = new Schema(
     transmission: String,
     engine: String,
     horsePower: String,
-    image: String
+    image: String,
+    reviews: [{ type: Schema.Types.ObjectId, ref: 'Review' }]
   },
   { timestamps: true }
 )
