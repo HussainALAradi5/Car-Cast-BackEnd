@@ -5,6 +5,7 @@ const url = 'https://freetestapi.com/api/v1/cars'
 const index = async (req, res) => {
   try {
     const response = await axios.get(url)
+    console.log('response=' + response)
     const carsData = response.data
     console.log('carDate=' + carsData)
     const cars = carsData.map((car) => ({
