@@ -1,14 +1,16 @@
 const Car = require('../models/car')
 
 async function create(req, res) {
-  const car = await Car.findById(req.params.id)
+  console.log('create new review')
+  const car = await Car.findOne({ id: req.params.id }).populate('reviews')
+  console.log(`car ${JSON.stringify(car)}`)
   car.reviews.push(req.body)
   try {
     await car.save()
   } catch (err) {
     console.log(err)
   }
-  res.redirect(`/car/${car._id}`)
+  res.send(car)
 }
 
 module.exports = { create }
