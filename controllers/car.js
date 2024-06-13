@@ -15,7 +15,7 @@ const index = async (req, res) => {
       year: car.year,
       color: car.color,
       mileage: car.mileage,
-      price: car.price / 105, // Modify price
+      price: car.price / 230, // Modify price
       fuelType: car.fuelType,
       transmission: car.transmission,
       engine: car.engine,
