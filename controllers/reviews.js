@@ -10,3 +10,4 @@ async function create(req, res) {
   }
   res.redirect(`/cars/${car._id}`)
 }
+module.exports = { create }
