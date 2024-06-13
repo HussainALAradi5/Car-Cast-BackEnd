@@ -20,7 +20,8 @@ const index = async (req, res) => {
       transmission: car.transmission,
       engine: car.engine,
       horsePower: car.horsePower,
-      image: car.image
+      image: car.image,
+      reviews: []
     }))
 
     const savedCars = await Car.insertMany(cars)
