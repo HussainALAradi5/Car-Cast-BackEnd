@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const carCtrl = require('../controllers/car')
+const reviewCtrl = require('../controllers/reviews')
 router.get('/', carCtrl.index)
 router.get('/car/new', carCtrl.new)
 router.post('/car/new', carCtrl.new)

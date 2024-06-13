@@ -3,7 +3,6 @@ const Schema = mongoose.Schema
 
 const reviewSchema = new Schema(
   {
-    rid: Number,
     uid: String,
     review: String
   },
