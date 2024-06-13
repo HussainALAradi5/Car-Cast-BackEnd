@@ -8,5 +8,6 @@ async function create(req, res) {
   } catch (err) {
     console.log(err)
   }
-  res.redirect(`/cars/${car._id}`)
+  res.redirect(`/car/${car._id}`)
 }
+module.exports = { create }
