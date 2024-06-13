@@ -37,7 +37,7 @@ const show = async (req, res) => {
   const carId = req.params.id // Use id from request params
 
   try {
-    const car = await Car.findOne({ id: carId }).populate(Car.reviews)
+    const car = await Car.findOne({ id: carId }).populate('reviews')
     if (!car) {
       return res.status(404).send('Car not found')
     }
